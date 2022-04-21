@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>class name: kim rain</title>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['최상',     11],
+          ['개념',      2],
+          ['하',  2],
+          ['중', 2],
+          ['상',    7]
+        ]);
+
+        var options = {
+          title: '틀린문제 난이도별 구성비',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Month', '최상', '상', '중', '하', '기본 개념', '총 점수'],
+          ['1단원',   5,      15,      20,     20,     20,       85],
+          ['2단원',   5,      10,      20,     20,     20,       90],
+          ['3단원',  10,       5,      20,     20,     20,       80],
+          ['4단원',   5,      10,      20,     20,     20,       90],
+          ['5단원',  10,       5,      20,     20,     20,       95],
+          ['6단원',  10,       5,      20,     20,     20,      100],
+        ]);
+
+        var options = {
+          title : '5학년2학기 수준별 TEST#1',
+          vAxis: {title: '점수'},
+          hAxis: {title: '단원'},
+          seriesType: 'bars',
+          series: {5: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <script type="text/javascript">
+    google.charts.load("current", {packages:["timeline"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var container = document.getElementById('example5.6');
+      var chart = new google.visualization.Timeline(container);
+      var dataTable = new google.visualization.DataTable();
+      dataTable.addColumn({ type: 'string', id: 'Position' });
+      dataTable.addColumn({ type: 'string', id: 'Name' });
+      dataTable.addColumn({ type: 'string', id: 'style', role: 'style' });
+      dataTable.addColumn({ type: 'date', id: 'Start' });
+      dataTable.addColumn({ type: 'date', id: 'End' });
+      dataTable.addRows([
+        [ '개념 설명 및 진도', '5-2 개념+유형','#2B60DE', new Date(2021, 12, 13), new Date(2022, 03, 28)],
+        [ '개념 설명 및 진도', '6-1 개념+유형','#FF4500', new Date(2022, 04, 6), new Date(2022, 07, 07 )],
+        [ '개념 설명 및 진도', '6-2 개념+유형','#F6BE00', new Date(2022, 07, 21), new Date(2022, 10, 10)],
+        [ '계산력 기르기', '기적의 계산법 10권','#2B60DE', new Date(2021, 10, 28), new Date(2022, 03, 26)],
+        [ '계산력 기르기', '기적의 계산법 11권','#FF4500', new Date(2022,  03, 26), new Date(2022, 06, 28)],
+        [ '계산력 기르기', '기적의 계산법 12권','#F6BE00', new Date(2022, 06, 28), new Date(2022, 10, 10)],
+        [ '계산력 기르기', '디딤돌 연산 1A','#006400', new Date(2022, 10, 10), new Date(2023, 1, 20)],
+        [ '복습 및 심화 경험', '5-2 개념+연산 파워','#2B60DE', new Date(2022, 2, 10), new Date(2022, 3, 21)],
+        [ '복습 및 심화 경험', '5-2 최상위S','#157DEC', new Date(2022, 3, 21), new Date(2022, 4, 12)],
+        [ '복습 및 심화 경험', '6-1 개념+연산 파워','#FF4500', new Date(2022, 4, 12), new Date(2022, 6, 14)],
+        [ '복습 및 심화 경험', '6-1 최상위S','#FF6347', new Date(2022, 6, 14), new Date(2022, 7, 18)],
+        [ '복습 및 심화 경험', '6-2 개념+연산 파워','#F6BE00', new Date(2022, 7, 21), new Date(2022, 9, 27)],
+        [ '복습 및 심화 경험', '6-2 최상위S','#FBB117', new Date(2022, 9, 27), new Date(2022, 10, 24)]
+      ]);
+
+      chart.draw(dataTable);
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=IM+Fell+English+SC&family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+  <style>
+  p {
+    font-size: 13px;
+    text-align: center;
+      }
+  h1 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+    display: block;
+    width:50%;
+  }
+
+  #center {
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+      width: 50%;
+    }
+  #grid {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1.5fr 0.5fr;
+  }
+  </style>
+</head>
+<body>
+<h4 style="text-align:right; margin-top:30px; margin-right: 50px; color:black;"><a href="welcome_page.html">HOME</a></h4>
+<h1 style="font-size: 60px; margin-top:0;margin-left: auto; margin-right: auto;">KIM RAE-IN CLASS</h1>
+<p style="text-align:center; font-family: 'Gowun Batang', serif;"> 수업을 진행하다 보면 계획이 변경되는 일이 잦습니다.<br><br>
+  정해진 커리큘럼에 아이들을 맞추는 대형학원과는 달리<br>
+  아이들에 맞춰 계획을 설정하는 과외의 특성상 계획은 자주 수정되기 마련입니다.<br><br>
+  문제는 꼼꼼함과는 거리가 있는 제가 수업 계획의 큰 틀을 충분히 인지하고 있지 못하고 있었다는 점입니다.<br>
+  또 변경된 세부 사항들을 매번 학부모님께 알리는 것도 게으른 저에겐 꽤 번거로운 일이었죠.<br><br>
+  그래서 저는 모든 계획의 중심이 되는 큰 틀을 만들고자 합니다.<br><br>
+  아래의 타임라인이 바로 래인이 수업 계획의 큰 틀입니다.<br><br>
+</p>
+<div id="example5.6" style="height: 200px; margin-left: 15%; margin-right:15%;"></div>
+<p style="text-align: center; padding-bottom:30px; margin:0; font-family: 'Gowun Batang', serif;"> 현재(2022.04.22) 저희는 5학년 2학기 총 6개 단원의 개념 설명을 마쳤습니다.<br>
+    그런데 오늘(2022.04.22) 래인이가 저에게 이런 말을 했습니다.<br><br>
+    "와 선생님 기억이 안나요. 어떻게 이렇게 금방 까먹죠?"<br><br>
+    그래서 저는 6학년 1학기를 시작(2022.05.05 예정)하기 전에 <br>
+    3차례의 개념, 상-중-하, 최상위 각 5문제, 총 25문제로 구성된 테스트를 진행하고자 합니다.<br><br><br>
+</p>
+<h2 style="font-size: 25px; margin-top:0; text-align:center;">TEST #1</h2>
+<div id="grid">
+  <div>
+    <p>
+      <p>
+  </div>
+<div id="chart_div" style="width: 600px; height: 400px;"></div>
+<p style="text-align: center; padding:150px; font-family: 'Gowun Batang', serif;">왼쪽의 통계자료는 래인이의 단원별 학습 수준을 파악하는 것이 목적입니다.<br> 통계 결과에 따라 복습의 우선순위를 정하려고 합니다.
+</p>
+<div>
+  <p>
+    <p>
+</div>
+</div>
+<br><br><br><br>
+<div id="grid">
+  <div>
+    <p>
+      <p>
+  </div>
+  <div id="donutchart" style="width: 600px; height: 400px;"></div>
+  <p style="text-align: center; padding:150px; font-family: 'Gowun Batang', serif;"> 오른쪽의 통계자료에서는 래인이의 난이도별 학습 수준을 파악하는 것이 목적입니다.<br>
+    틀린 문제의 난이도별 구성비를 알아봄으로써<br>현 성취 단계와 앞으로의 도전 단계를 합리적으로 설정하고자 합니다.
+  </p>
+<div>
+  <p>
+    <p>
+</div>
+</div>
+</body>
+</html>
